@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Space+Grotesk:wght@300..700&family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@300..900&display=swap');
+@import "tailwindcss";
+
+:root {
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  /* Obsidian Black & Champagne Liquid Gold Luxury Palette */
+  --bg-obsidian: #050508;
+  --bg-card: #0c0b11;
+  --bg-card-hover: #121019;
+  
+  --gold-50: #fefce8;
+  --gold-100: #fef9c3;
+  --gold-200: #fef08a;
+  --gold-300: #fde047;
+  --gold-400: #facc15;
+  --gold-500: #eab308;
+  --gold-600: #ca8a04;
+  --gold-700: #a16207;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: var(--bg-obsidian);
+  color: #f8fafc;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: var(--bg-obsidian);
+  color: #f8fafc;
+  min-height: 100vh;
+  selection-background-color: rgba(234, 179, 8, 0.35);
+  selection-color: #fef08a;
+}
+
+/* Custom Luxury Gold Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #050508;
+}
+::-webkit-scrollbar-thumb {
+  background: #272335;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #eab308;
+}
+
+/* Typography Classes */
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Luxury Champagne Gold Gradients */
+.gradient-text-gold {
+  background: linear-gradient(135deg, #fffbeb 0%, #fde047 30%, #eab308 65%, #b45309 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-platinum {
+  background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 50%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Obsidian Glass Panels with Golden Hairline Borders */
+.gold-glass-card {
+  background: rgba(12, 11, 17, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(234, 179, 8, 0.16);
+  box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(254, 240, 138, 0.08);
+}
+
+.gold-glass-card-hover {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.gold-glass-card-hover:hover {
+  background: rgba(18, 16, 25, 0.9);
+  border-color: rgba(234, 179, 8, 0.45);
+  transform: translateY(-5px);
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.9), 0 0 30px rgba(234, 179, 8, 0.15), inset 0 1px 0 rgba(254, 240, 138, 0.2);
+}
+
+.gold-nav-bar {
+  background: rgba(5, 5, 8, 0.85);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid rgba(234, 179, 8, 0.14);
+}
+
+/* Ambient Gold Mesh Background */
+.obsidian-mesh-bg {
+  background-color: #050508;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(234, 179, 8, 0.08) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(217, 119, 6, 0.06) 0px, transparent 50%),
+    radial-gradient(at 50% 100%, rgba(202, 138, 4, 0.07) 0px, transparent 60%);
+}
+
+.luxury-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(234, 179, 8, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(234, 179, 8, 0.03) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+/* Keyframes */
+@keyframes goldPulse {
+  0%, 100% { opacity: 0.35; transform: scale(1); }
+  50% { opacity: 0.65; transform: scale(1.08); }
+}
+
+.animate-gold-pulse {
+  animation: goldPulse 6s ease-in-out infinite;
+}
+
+@keyframes floatSmooth {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(1deg); }
+}
+
+.animate-float-smooth {
+  animation: floatSmooth 6s ease-in-out infinite;
+}
